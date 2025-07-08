@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: oklch(98.4% 0.003 247.858);
+}
+
+.chat {
+  width: 60%;
+  height: 80%;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 3px gray;
+}
+
+.message-container {
+  padding: 5px 10px;
+  max-width: 100%;
+  height: 95%;
+  max-height: 100%;
+
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.message-item {
+  font-size: 20px;
+  background-color: oklch(86.9% 0.022 252.894);
+  color: white;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.user-message {
+  background-color: oklch(82.8% 0.111 230.318);
+}
+
+.input-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+}
+
+input {
+  width: 70%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+button {
+  width: 30%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  background-color: dodgerblue;
+  height: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 80%;
+}
+
+.input-name {
+  height: 5%;
+}
