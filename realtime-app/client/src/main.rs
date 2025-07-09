@@ -4,8 +4,10 @@ use gloo_net::websocket::{futures::WebSocket, Message};
 use js_sys::Date;
 
 // 使用静态数组定义表情符号
-const EMOJIS: [&str; 6] = ["😀", "😂", "😍", "👍", "🙏", "🎉"];
-
+const EMOJIS: [&str; 24] = [
+    "😀", "😂", "😍", "👍", "🙏", "🎉", "😊", "🥰", "🤔", "🤯", "😎", "🥳",
+    "🥺", "🤗", "❤️", "💔", "🔥", "👏", "👀", "✨", "💡", "🚀", "🌍", "🤖"
+];
 fn main() {
     launch(App);
 }
@@ -13,7 +15,7 @@ fn main() {
 #[component]
 fn App() -> Element {
     rsx! {
-        document::Stylesheet { href: asset!("/assets/main.css") }
+        document::Stylesheet { href: asset!("/src/style.css") }
         Home {}
     }
 }
@@ -70,9 +72,6 @@ fn Home() -> Element {
             }
         } else {
             div { class: "chat-container",
-                // div { class: "online-count", 
-                //     "在线人数: {message_list().iter().filter(|msg| msg.contains(\"[系统]\")).count()}"
-                // }
                 div { class: "chat",
                     div { 
                         class: "message-container",
